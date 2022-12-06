@@ -150,8 +150,8 @@ class ScreenshotController {
 
     final RenderRepaintBoundary repaintBoundary = RenderRepaintBoundary();
 
-    Size logicalSize = targetSize ??
-        ui.window.physicalSize / ui.window.devicePixelRatio; // Adapted
+    Size logicalSize = (targetSize ??
+            ui.window.physicalSize) / ui.window.devicePixelRatio; // Adapted
     Size imageSize = targetSize ?? ui.window.physicalSize; // Adapted
 
     assert(logicalSize.aspectRatio.toStringAsPrecision(5) ==
